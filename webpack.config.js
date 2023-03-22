@@ -14,7 +14,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'public/index.html',
       hash: true,
-      filename: '../dist/index.html',
+      favicon: './public/favicon.ico',
     }),
   ],
   module: {
@@ -30,6 +30,12 @@ module.exports = {
         test: /\.(ts|tsx)?$/,
         loader: 'ts-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader',
+        },
       },
     ],
   },

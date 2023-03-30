@@ -1,10 +1,22 @@
 import { API_BASE_URL } from '../../constants';
 
+export enum ActivytType {
+  EDUCATION = 'education',
+  RECREATIONAL = 'recreational',
+  SOCIAL = 'social',
+  DIY = 'diy',
+  CHARITY = 'charity',
+  COOKING = 'cooking',
+  RELAXATION = 'relaxation',
+  MUSIC = 'music',
+  BUSYWORK = 'busywork',
+}
+
 export interface IActivity {
   key: string;
   activity: string;
   accessibility: number;
-  type: string;
+  type: ActivytType;
   participants: number;
   price: number;
   link?: string;

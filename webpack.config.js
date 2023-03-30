@@ -37,10 +37,14 @@ module.exports = {
           loader: 'url-loader',
         },
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   resolve: {
-    extensions: ['.ts', '.js', '.json', '.tsx'],
+    extensions: ['.ts', '.js', '.json', '.tsx', '.css'],
   },
   devServer: {
     port: 3000,
